@@ -1,0 +1,50 @@
+.navbarh {
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    border-bottom: 2px solid black;
+    display: flex;
+}
+
+.logo-navbar1{
+    height: 100px;
+}
+.logo-navbar{
+    height: 100px;
+    opacity: 0;
+}
+
+
+
+.logo-navbar1{
+    animation: roll 0.5s linear;
+}
+@keyframes roll{
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-359deg);
+      }
+}
+
+
+
+
+.logo-navbar{
+	animation: slide-in-blurred-left 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@keyframes slide-in-blurred-left {
+    0% {
+              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+              transform-origin: 100% 50%;
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0) scaleY(1) scaleX(1);
+              transform-origin: 50% 50%;
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
